@@ -34,7 +34,6 @@ async def video_autocomplete(interaction: discord.Interaction, current: str):
 @tree.command(
     name="video",
     description="Send a video about a topic to a given User!",
-    guild=discord.Object(id=1352325360569811024)
 )
 @app_commands.describe(
     topic="The topic of the video",
@@ -60,7 +59,6 @@ async def video_command(interaction: discord.Interaction, topic: str, user: disc
 @tree.command(
     name="ping-disable",
     description="Opt yourself out or back into being pinged.",
-    guild=discord.Object(id=1352325360569811024)
 )
 async def ping_disable(interaction: discord.Interaction):
     user_id = interaction.user.id
@@ -81,7 +79,6 @@ async def ping_disable(interaction: discord.Interaction):
 @tree.command(
     name="info",
     description="General information about the bot",
-    guild=discord.Object(id=1352325360569811024)
 )
 async def info_command(interaction: discord.Interaction):
     message = (
@@ -96,7 +93,7 @@ async def info_command(interaction: discord.Interaction):
 
 @client.event
 async def on_ready():
-    await tree.sync(guild=discord.Object(id=1352325360569811024))
+    await tree.sync()
     print("Ready!")
 
 if TOKEN:
