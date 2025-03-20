@@ -94,6 +94,17 @@ async def info_command(interaction: discord.Interaction):
 @client.event
 async def on_ready():
     await tree.sync()
+
+    guild = discord.utils.get(client.guilds, id=841473212763734027) # Redstone Army
+
+    if guild:
+        status_text = "Redstone Army"
+    else:
+        status_text = "the ORE Network"
+
+    activity = discord.Game(name=f"on {status_text}")
+    await client.change_presence(activity=activity)
+
     print("Ready!")
 
 if TOKEN:
