@@ -1,10 +1,11 @@
-![Static Badge](https://img.shields.io/badge/Version-1.0-blue)
+![Static Badge](https://img.shields.io/badge/Version-1.1-blue)
 
 ## Installation
-Follow this Link to add the Bot to your server: https://discord.com/oauth2/authorize?client_id=1352322394504560693
+Follow this Link to add the Bot to your server: 
+[https://discord.com/oauth2/authorize?client_id=1352322394504560693](https://discord.com/oauth2/authorize?client_id=1352322394504560693)
 
 ## Setup Links
-Edit `config.json`: In `"videos": {},` add keys like: `"test": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",`
+Edit `config.json`: In `"videos": {},` add categories like: `"Gaming": {}` with keys like: `"Minecraft": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",` or `"Channel": "https://www.youtube.com/@wueffiYT"`.
 
 ## Commands
 `/video <topic> <user>`: Send a user a video about a topic.
