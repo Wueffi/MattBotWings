@@ -4,6 +4,8 @@
 Follow this Link to add the Bot to your server: 
 [https://discord.com/oauth2/authorize?client_id=1352322394504560693](https://discord.com/oauth2/authorize?client_id=1352322394504560693)
 
+Or, for self hosting paste your `BOT_TOKEN` in the `.env` file.
+
 ## Setup Links
 Edit `config.json`: In `"videos": {},` add categories like: `"Gaming": {}` with keys like: `"Minecraft": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",` or `"Channel": "https://www.youtube.com/@wueffiYT"`.
 
