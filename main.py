@@ -17,6 +17,10 @@ def save_config(config):
 
 config = load_config()
 
+category_count = len(config.get("videos", {}))
+subcategory_count = sum(len(topics) for topics in config.get("videos", {}).values())
+print(f"Loaded {category_count} categories with {subcategory_count} subcategories.")
+
 categories = list(config.get("videos", {}).keys())
 
 intents = discord.Intents.default()
@@ -105,12 +109,12 @@ async def info_command(interaction: discord.Interaction):
 @client.event
 async def on_ready():
     await tree.sync()
-    guild = discord.utils.get(client.guilds, id=841473212763734027)  # Redstone Army
+    guild = discord.utils.get(client.guilds, id=841473212763734027)  # Redstone Army Guild id
 
     if guild:
-        status_text = "Redstone Army"
+        status_text = "on Redstone Army"
     else:
-        status_text = "the ORE Network"
+        status_text = "on Mattbatwings Server"
 
     activity = discord.Game(name=f"on {status_text}")
     await client.change_presence(activity=activity)
