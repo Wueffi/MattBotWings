@@ -118,7 +118,7 @@ async def on_ready():
 
     activity = discord.Game(name=f"on {status_text}")
     await client.change_presence(activity=activity)
-    print("Ready!")
+    print("Booted up successfully!")
 
 if TOKEN:
     client.run(TOKEN)
