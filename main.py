@@ -85,7 +85,7 @@ async def ping_disable(interaction: discord.Interaction):
         action = "You will now be pinged in video messages."
     else:
         ignored_users.append(user_id)
-        action = "You won't be pinged in video messages now."
+        action = "You won't be pinged in video messages anymore."
 
     config["ignored_users"] = ignored_users
     save_config(config)
@@ -112,9 +112,9 @@ async def on_ready():
     guild = discord.utils.get(client.guilds, id=841473212763734027)  # Redstone Army Guild id
 
     if guild:
-        status_text = "on Redstone Army"
+        status_text = "Redstone Army"
     else:
-        status_text = "on Mattbatwings Server"
+        status_text = "Mattbatwings Server"
 
     activity = discord.Game(name=f"on {status_text}")
     await client.change_presence(activity=activity)
